@@ -1,0 +1,114 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    table-layout: auto;
+
+    th,
+    td {
+        outline: 1px solid #ccc;
+        padding: 2px;
+        text-align: center;
+        font-size: 8px;
+        background: #f2f8f3;
+        transition: background-color 0.2s ease;
+
+        &:hover {
+            background: #e1f3e1;
+        }
+
+        &.vertical-text,
+        &.cm-column {
+            writing-mode: sideways-lr;
+        }
+
+        &[data-sum] {
+            font-weight: 500;
+            background: #eaeaea;
+        }
+
+        input[type="number"] {
+            background: #d8f3dc;
+            border: 1px solid #aaa;
+            border-radius: 4px;
+            text-align: center;
+            transition: box-shadow 0.2s ease-in-out;
+
+            &:focus {
+                box-shadow: 0 0 5px 2px #77b300;
+                border-color: #77b300;
+                background: #fafff0;
+            }
+        }
+
+
+
+        button {
+            background: #2f5c2f;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 4px 6px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s, box-shadow 0.2s;
+
+            &:hover {
+                background: #40916c;
+                box-shadow: 0 0 6px rgba(64, 145, 108, 0.3);
+            }
+
+            &:active {
+                background: #1b4332;
+                box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+            }
+        }
+
+                
+    }
+
+    
+
+    thead {
+        position: sticky;
+        top: 74px;
+        z-index: 1000;
+
+        td {
+            background: #cfe5d6;
+            color: #1b3d2f;
+        }
+    }
+
+    .active {
+        display: table-cell;
+    }
+
+    td {
+        display: none;
+        max-width: 200px;
+    }
+        @media (max-width: $bp-mobile) {
+            button {
+                width: 30px;
+                min-height: 20px;
+            }
+            input {
+                display: block;
+                margin: 2px auto;
+            }
+        }
+    
+        @media (min-width: 481px) {
+            button {
+                width: 32px;
+                min-height: 20px;
+            }
+                        tr td {
+                            font-size: 12px;
+                        }
+        }
+    
+}
+

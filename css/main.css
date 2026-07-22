@@ -1,0 +1,287 @@
+:root {
+  --color-white: white;
+  --color-black: rgba(14, 12, 12, 1);
+  --color-red: rgba(202, 24, 24, 1);
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/rubik-v28-arabic_cyrillic_cyrillic-ext_hebrew_latin_latin-ext-regular.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/rubik-v28-arabic_cyrillic_cyrillic-ext_hebrew_latin_latin-ext-500.woff2") format("woff2");
+}
+.nav-bar {
+  display: flex;
+  align-items: center;
+  background: #f2f8f3;
+  outline: 1px solid #c5e1c5;
+  border-radius: 12px;
+  padding: 10px 20px;
+  margin: 10px 0 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 1001;
+}
+.nav-bar__item {
+  display: flex;
+}
+.nav-bar__item button {
+  background: #d6eadf;
+  border: none;
+  border-radius: 8px;
+  padding: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-bar__item button:hover {
+  background: #b5ddb5;
+}
+.nav-bar__item button:hover svg {
+  fill: #1e401e;
+}
+.nav-bar__item button:first-child:hover {
+  background: #e45a5a;
+}
+.nav-bar__item button svg {
+  fill: #2f5c2f;
+  transition: fill 0.2s ease;
+}
+
+.tree-select {
+  display: block;
+  margin: 10px auto;
+  padding: 6px 12px;
+  font-size: 16px;
+  border: 1px solid #88b888;
+  border-radius: 8px;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+.tree-select:hover {
+  border-color: #4d944d;
+  background: #eef8ee;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  color: #2d3a2e;
+  font-family: Rubik, sans-serif;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0;
+  background: linear-gradient(to bottom right, #e0f2e9, #ffffff);
+  background-attachment: fixed;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+address,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+  list-style: none;
+}
+
+input {
+  width: 36px;
+  height: 20px;
+  padding: 2px;
+  margin: 1px 5px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 400px;
+  padding: 4px;
+  margin: 0 auto;
+  position: relative;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 8px;
+  }
+  tbody tr td:first-child {
+    font-weight: 600;
+    font-size: 10px;
+  }
+}
+@media (min-width: 768px) {
+  h1 {
+    font-size: 20px;
+  }
+  .cm-column,
+  tbody tr td:first-child {
+    width: 60px;
+    max-width: 60px;
+    writing-mode: horizontal-tb;
+  }
+  input {
+    width: 50px;
+    height: 30px;
+    padding: 4px;
+  }
+  .wrapper {
+    max-width: 1200px;
+    padding: 8px;
+  }
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  table-layout: auto;
+}
+table th,
+table td {
+  outline: 1px solid #ccc;
+  padding: 2px;
+  text-align: center;
+  font-size: 8px;
+  background: #f2f8f3;
+  transition: background-color 0.2s ease;
+}
+table th:hover,
+table td:hover {
+  background: #e1f3e1;
+}
+table th.vertical-text, table th.cm-column,
+table td.vertical-text,
+table td.cm-column {
+  writing-mode: sideways-lr;
+}
+table th[data-sum],
+table td[data-sum] {
+  font-weight: 500;
+  background: #eaeaea;
+}
+table th input[type=number],
+table td input[type=number] {
+  background: #d8f3dc;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  text-align: center;
+  transition: box-shadow 0.2s ease-in-out;
+}
+table th input[type=number]:focus,
+table td input[type=number]:focus {
+  box-shadow: 0 0 5px 2px #77b300;
+  border-color: #77b300;
+  background: #fafff0;
+}
+table th button,
+table td button {
+  background: #2f5c2f;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 4px 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+table th button:hover,
+table td button:hover {
+  background: #40916c;
+  box-shadow: 0 0 6px rgba(64, 145, 108, 0.3);
+}
+table th button:active,
+table td button:active {
+  background: #1b4332;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+table thead {
+  position: sticky;
+  top: 74px;
+  z-index: 1000;
+}
+table thead td {
+  background: #cfe5d6;
+  color: #1b3d2f;
+}
+table .active {
+  display: table-cell;
+}
+table td {
+  display: none;
+  max-width: 200px;
+}
+@media (max-width: 480px) {
+  table button {
+    width: 30px;
+    min-height: 20px;
+  }
+  table input {
+    display: block;
+    margin: 2px auto;
+  }
+}
+@media (min-width: 481px) {
+  table button {
+    width: 32px;
+    min-height: 20px;
+  }
+  table tr td {
+    font-size: 12px;
+  }
+}
+
+button {
+  padding: 2px 4px;
+  margin: 0 2px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  #print-btn,
+  #load-btn,
+  #save-btn,
+  #clean-btn {
+    width: 40px;
+    height: 35px;
+    font-size: 10px;
+  }
+}
+@media (min-width: 768px) {
+  #print-btn,
+  #load-btn,
+  #save-btn,
+  #clean-btn {
+    width: 60px;
+    height: 46px;
+    font-size: 10px;
+  }
+}/*# sourceMappingURL=main.css.map */
