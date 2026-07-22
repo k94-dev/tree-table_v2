@@ -6,8 +6,7 @@ const todayData = `${day}.${month}.${year}`
 const mainHeader = `<h1 class="main-header">Польова перелікова відомість дерев, призначених для рубки</h1>
         <p>Адміністративно-територіальна одиниця місце знаходження/місце проживання(перебування) постійного лісокористувача (відокремленого підрозділу)/власника лісів/власника, орендаря чи користувача земельних ділянок, на яких розташовано полезахисні лісові смуги
          <input name="region" style="border:none; text-decoration-line: underline;  width: 500px" type="text" value="Сумська обл., м. Суми, вул. Засумська, 12 д"></input></p>
-        <p>Постійний лісокористувач(відокремлений підрозділ)/власник лісів/власник, орендар чи користувач земельних ділянок, на яких розташовано полезахисні лісові смуги
-        <input name="company" style="border:none; text-decoration-line: underline; width: 800px;" type="text" value="ДП «Ліси України»"></p>
+        <p>Постійний лісокористувач(відокремлений підрозділ)/власник лісів/власник, орендар чи користувач земельних ділянок, на яких розташовано полезахисні лісові смуги <input name="company" style="border:none; text-decoration-line: underline; width: 150px;" type="text" value="ДП «Ліси України»"></p>
         <p>Філія, представництво, відділення чи інший підрозділ<input list="affiliate_name" name="affiliate" style="border:none; text-decoration-line: underline; width: 800px;" type="text">
         <datalist id="affiliate_name">
         <option value='Філія «Північний лісовий офіс» Державного спеціалізованого господарського підприємства «Ліси України»"'></option>
