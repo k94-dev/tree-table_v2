@@ -127,3 +127,12 @@ tbody .vertical-text {
     margin: 6px 0;
 }
 
+.footnote {
+    font-size: 6.5pt;
+    text-align: justify;
+}
+
+.underlined-text {
+    text-decoration: underline;
+    margin-left: 4pt;
+}
