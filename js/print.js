@@ -7,18 +7,18 @@ const mainHeader = `<h1 class="main-header">Польова перелікова 
         <p>Адміністративно-територіальна одиниця місце знаходження/місце проживання(перебування) постійного лісокористувача (відокремленого підрозділу)/власника лісів/власника, орендаря чи користувача земельних ділянок, на яких розташовано полезахисні лісові смуги
          <input name="region" style="border:none; text-decoration-line: underline;  width: 500px" type="text" value="Сумська обл., м. Суми, вул. Засумська, 12 д"></input></p>
         <p>Постійний лісокористувач(відокремлений підрозділ)/власник лісів/власник, орендар чи користувач земельних ділянок, на яких розташовано полезахисні лісові смуги <input name="company" style="border:none; text-decoration-line: underline; width: 150px;" type="text" value="ДП «Ліси України»"></p>
-        <p>Філія, представництво, відділення чи інший підрозділ<input list="affiliate_name" name="affiliate" style="border:none; text-decoration-line: underline; width: 800px;" type="text">
+        <p>Філія, представництво, відділення чи інший підрозділ*<input list="affiliate_name" name="affiliate" style="border:none; text-decoration-line: underline; width: 800px;" type="text">
         <datalist id="affiliate_name">
         <option value='Філія «Північний лісовий офіс» Державного спеціалізованого господарського підприємства «Ліси України»"'></option>
         </datalist></p>
-        <p>Найменування лісництва(структурного підрозділу) <input list="forestry_name" name="district" style="border:none; text-decoration-line: underline; width: 500px;" type="text">
+        <p>Найменування лісництва(структурного підрозділу)* <input list="forestry_name" name="district" style="border:none; text-decoration-line: underline; width: 500px;" type="text">
         <datalist id="forestry_name">
       <option value='Свеське (ДП "Свеське ЛГ") Шосткинське надлісництво'></option>
       <option value='Свеське(Чуйківське) (ДП "Свеське ЛГ") Шосткинське надлісництво'></option>
       <option value='Прудищанське (ДП "Свеське ЛГ") Шосткинське надлісництво'></option>
       <option value='Дружбівське (ДП "Свеське ЛГ") Шосткинське надлісництво'></option>
       <option value='Олинське (ДП "Свеське ЛГ") Шосткинське надлісництво'></option></datalist></p>
-        <p>категорія лісів <input name="forest-category" style="border:none; text-decoration-line: underline; width: 40px;" type="text">, господарство/господарська секція
+        <p>категорія лісів* <input name="forest-category" style="border:none; text-decoration-line: underline; width: 40px;" type="text">, господарство/господарська секція*
         <input list="farm_section" name="section" style="border:none; text-decoration-line: underline; width: 116px;" type="text"> <datalist id="farm_section">
       <option value="хвойне/соснова"></option>
       <option value="хвойне/ялинова"></option>
@@ -27,8 +27,8 @@ const mainHeader = `<h1 class="main-header">Польова перелікова 
       <option value="м.лист./осикова"></option>
       <option value="м.лист./вільхова"></option>
     </datalist>,
-        номер кварталу <input name="kvartal" style="border:none; text-decoration-line: underline; width: 40px;" type="text">, номер виділу <input name="vydil" style="border:none; text-decoration-line: underline; width: 40px;" type="text">, 
-        номер ділянки <input name="dilyanka" style="border:none; text-decoration-line: underline; width: 40px;" type="text">, лісосіка на <input name="year" style="border:none; text-decoration-line: underline; width: 40px;" type="text"> рік, система рубок
+        номер кварталу* <input name="kvartal" style="border:none; text-decoration-line: underline; width: 40px;" type="text">, номер виділу* <input name="vydil" style="border:none; text-decoration-line: underline; width: 40px;" type="text">, 
+        номер ділянки* <input name="dilyanka" style="border:none; text-decoration-line: underline; width: 40px;" type="text">, лісосіка на <input name="year" style="border:none; text-decoration-line: underline; width: 40px;" type="text"> рік, система рубок
         <input list="system" name="system" style="border:none; text-decoration-line: underline; width: 112px;" type="text">
         <datalist id="system">
       <option value="РФіОЛ-догляду"></option>
@@ -54,7 +54,10 @@ const mainHeader = `<h1 class="main-header">Польова перелікова 
     </datalist></p>
     `;
         
-const mainFooter = `<p class="second-side--text">Відомість склали:</p>
+const mainFooter = `</br>
+<p class="footnote">* У разі проведення заходів з утримання та збереження полезахисних лісових смуг на підставі обстежень відповідно до пункту 3 Правил утримання та збереження полезахисних лісових смуг, розташованих на землях сільськогосподарського призначення, затверджених постановою Кабінету Міністрів України від 22 липня 2020 року № 650 (далі — Правила), позиції «Філія, представництво, відділення чи інший підрозділ», «Найменування лісництва (структурного підрозділу)», «категорія лісів», «господарство / господарська секція», «номер виділу», «номер ділянки» не заповнюються. При цьому у позиції «номер кварталу» зазначається кадастровий номер ділянки, на якій проводитимуться заходи з утримання та збереження полезахисних лісових смуг на підставі обстежень відповідно до пункту 3 Правил.</p> 
+<p class="footnote">** Графа повторюється стільки разів, скільки порід в насадженні.</p> 
+<p class="second-side--text">Відомість склали:</p>
 <div class="footer second-side">
   <table class="footer__table">
     <thead>
@@ -175,6 +178,17 @@ function splitTableByTreesValid(table, maxTreesPerPage = 4) {
       }
     });
 
+    
+
+clone.querySelectorAll('thead tr:nth-child(2) [data-tree]').forEach(cell => {
+  if (
+    treeGroup.includes(cell.dataset.tree) &&
+    cell.colSpan === 5
+  ) {
+    cell.innerHTML = `Порода** <span class="underlined-text">${cell.dataset.tree}</span>`;
+  }
+});
+
     while (treeGroup.length < 3) {
       const emptyName = `__empty_group${groupIndex}_${treeGroup.length + 1}`;
       treeGroup.push(emptyName);
@@ -230,6 +244,8 @@ function splitTableByTreesValid(table, maxTreesPerPage = 4) {
 
     return clone.outerHTML;
   });
+
+  
 }
 
 function splitTableByTreesInvalid(table, maxTreesPerPage = 4) {
@@ -266,6 +282,13 @@ function splitTableByTreesInvalid(table, maxTreesPerPage = 4) {
       if (!treeGroup.includes(cell.dataset.tree)) {
         cell.remove();
       }
+
+    
+clone.querySelectorAll('thead [data-tree]').forEach(cell => {
+  if (treeGroup.includes(cell.dataset.tree)) {
+    cell.innerHTML = `Порода** <span class="underlined-text">${cell.dataset.tree}</span>`;
+  }
+});
     });
 
     while (treeGroup.length < 3) {
