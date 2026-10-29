@@ -9,7 +9,7 @@ const mainHeader = `<h1 class="main-header">Польова перелікова 
         <p>Постійний лісокористувач(відокремлений підрозділ)/власник лісів/власник, орендар чи користувач земельних ділянок, на яких розташовано полезахисні лісові смуги <input name="company" style="border:none; text-decoration-line: underline; width: 150px;" type="text" value="ДП «Ліси України»"></p>
         <p>Філія, представництво, відділення чи інший підрозділ*<input list="affiliate_name" name="affiliate" style="border:none; text-decoration-line: underline; width: 800px;" type="text">
         <datalist id="affiliate_name">
-        <option value='Філія «Північний лісовий офіс» Державного спеціалізованого господарського підприємства «Ліси України»"'></option>
+        <option value='Філія «Північний лісовий офіс»'></option>
         </datalist></p>
         <p>Найменування лісництва(структурного підрозділу)* <input list="forestry_name" name="district" style="border:none; text-decoration-line: underline; width: 500px;" type="text">
         <datalist id="forestry_name">
